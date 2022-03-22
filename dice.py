@@ -72,7 +72,7 @@ class set_dice:
         for x in range(number):
             self.create_die(loaded, load)
 
-    def roll_set(self):
+    def roll(self):
         self.total = 0
         for x in range(self.number_of_dice):
             self.total += self.set_of_dice[x].roll()
