@@ -61,7 +61,7 @@ class set_dice:
         self.total = 0
 
     def create_die(self, loaded = None, load = 1):
-        a = die
+        a = die()
         if loaded != None:
             die.load_dice(loaded, load)
 
@@ -75,6 +75,7 @@ class set_dice:
     def roll(self):
         self.total = 0
         for x in range(self.number_of_dice):
-            self.total += self.set_of_dice[x].roll()
+            current_dice = self.set_of_dice[x]
+            self.total += current_dice.roll()
 
         return self.total
