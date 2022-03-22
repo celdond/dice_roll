@@ -6,8 +6,8 @@ class die:
         self.sides = [1, 2, 3, 4, 5, 6]
         self.rolled = 0
 
-    def load_dice(self, side = None, load = 1):
-        if side != None:
+    def load_dice(self, side: int = 0, load: int = 1):
+        if side != 0:
             for x in range(load):
                 self.sides.append(side)
                 
@@ -23,14 +23,14 @@ class set_dice:
         self.number_of_dice = 0
         self.total = 0
 
-    def create_die(self, loaded = None, load = 1):
+    def create_die(self, loaded: int = 0, load: int = 1):
         a = die()
-        if loaded != None:
+        if loaded != 0:
             die.load_dice(loaded, load)
 
         self.set_of_dice.append(a)
 
-    def add_dice(self, number = 1, loaded = None, load = 1):
+    def add_dice(self, number: int = 1, loaded: int = 0, load: int = 1):
         self.number_of_dice += number
         for x in range(number):
             self.create_die(loaded, load)

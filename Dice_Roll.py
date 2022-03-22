@@ -8,5 +8,7 @@ def main():
     while c != "q":
         if c == "r":
             print(dice_set.roll())
+        elif c == "a":
+            dice_set.add_dice(int(input("How many?\n")), int(input("Are they loaded?\n")), int(input("How loaded?\n")))
         c = input()
 main()
