@@ -42,3 +42,8 @@ class set_dice:
             self.total += current_dice.roll()
 
         return self.total
+
+    def clear(self):
+        self.set_of_dice.clear()
+        self.number_of_dice = 0
+        self.total = 0
