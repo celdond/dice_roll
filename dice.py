@@ -16,43 +16,6 @@ class die:
         self.current = int(x)
         return x
 
-    def display_die(self):
-        top_bdr =  " _______ "
-        top =      "|       |"
-  
-        inside =  ["|       |",\
-                   "|   *   |",\
-                   "|       |",\
-
-                   "|     * |",\
-                   "|       |",\
-                   "| *     |",\
-
-                   "| *     |",\
-                   "|   *   |",\
-                   "|     * |",\
-
-                   "| *   * |",\
-                   "|       |",\
-                   "| *   * |",\
-
-                   "| *   * |",\
-                   "|   *   |",\
-                   "| *   * |",\
-
-                   "| *   * |",\
-                   "| *   * |",\
-                   "| *   * |"]
-
-        bottom =   "|_______|"
-
-        print('{} {}'.format(top_bdr))
-        print('{} {}'.format(top))
-        for i in range(3):
-          pat_1 = (int(self.A.current) - 1) * 3 + (i)
-          print('{} {}'.format(inside[pat_1]))
-        print('{} {}'.format(bottom))
-
 class set_dice:
 
     def __init__(self):
